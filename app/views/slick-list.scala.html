@@ -1,0 +1,14 @@
+@(members: Seq[models.Member])
+
+@main("list") {
+    @for(member <- members) {
+        <p>순서: @member.userSeq</p>
+        <p>아이디: @member.userId</p>
+        <p>비밀번호: @member.password</p>
+        <p>닉네임: @member.nickname</p>
+        <p>스코어: @member.score</p>
+        <p>레벨: @member.level</p>
+        <p>등록일자: @member.regdate</p>
+        <hr>
+    }
+}

@@ -8,10 +8,11 @@ lazy val root = (project in file("."))
     name := """hello-play""",
     libraryDependencies ++= Seq(
       guice,
-      jdbc,
       ws,
       "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
       "mysql" % "mysql-connector-java" % "8.0.32",
       "org.playframework.anorm" %% "anorm" % "2.6.9",
+      "com.typesafe.play" %% "play-slick" % "5.0.0",
+      "com.typesafe.play" %% "play-slick-evolutions" % "5.0.0",
     )
   )
