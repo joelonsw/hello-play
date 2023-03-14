@@ -1,8 +1,9 @@
 package controllers
 
-import models.MemberDataAccess
+import models.{Member, MemberDataAccess}
 import play.api.data._
 import play.api.data.Forms._
+import play.api.libs.json.JsValue
 import play.api.mvc._
 import services.MemberService
 
@@ -27,9 +28,8 @@ class MemberController @Inject()(val controllerComponents: ControllerComponents,
     Ok(views.html.index("Inserted"))
   }
 
-//  def memberSelect = Action {
-//    val selectedMember = memberDataAccess.getList
-//
-//    OK(views.html.`slick-list`(selectedMember))
-//  }
+  def getMemberAsJson() = Action {
+    val members: JsValue = memberDataAccess.getMembersAsJson()
+    Ok(members)
+  }
 }
