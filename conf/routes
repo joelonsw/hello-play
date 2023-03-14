@@ -2,14 +2,14 @@
 # This file defines all application routes (Higher priority routes first)
 # https://www.playframework.com/documentation/latest/ScalaRouting
 
-GET     /list                       controllers.MemberController.getList()
+GET        /list                controllers.MemberController.getList()
 
-GET     /insert                     controllers.MemberController.insertMember()
+GET        /insert              controllers.MemberController.insertMember()
 
-GET     /easy-deploy                controllers.OpenApiController.getList()
+GET        /easy-deploy         controllers.OpenApiController.getList()
 
-GET     /members                    controllers.MemberController.getMemberAsJson()
+GET        /members             controllers.MemberController.getMemberAsJson()
 
-GET     /create-table               controllers.MemberController.createMemberTable()
+GET        /create-table        controllers.MemberController.createMemberTable()
 
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET        /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
