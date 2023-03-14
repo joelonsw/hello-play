@@ -6,6 +6,8 @@ GET     /list                       controllers.MemberController.getList()
 
 GET     /insert                     controllers.MemberController.insertMember()
 
+GET     /easy-deploy                controllers.OpenApiController.getList()
+
 GET     /members                    controllers.MemberController.getMemberAsJson()
 
 GET     /create-table               controllers.MemberController.createMemberTable()
